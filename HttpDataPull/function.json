@@ -1,0 +1,23 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "trigger",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+
+    {
+      "type": "blob",
+      "direction": "out",
+      "name": "outputblob",
+      "path": "datasets/KNMI_{Datetime}.csv",
+      "connection": "AzureWebJobsStorage"
+    }
+  ]
+}

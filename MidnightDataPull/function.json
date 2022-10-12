@@ -1,0 +1,18 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "mytimer",
+      "type": "timerTrigger",
+      "direction": "in",
+      "schedule": "0 0 0 * * *"
+    },
+    {
+      "type": "blob",
+      "direction": "out",
+      "name": "outputblob",
+      "path": "datasets/KNMI_{Datetime}.csv",
+      "connection": "AzureWebJobsStorage"
+    }
+  ]
+}

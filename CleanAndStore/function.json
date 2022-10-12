@@ -1,0 +1,19 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "myblob",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "datasets/{name}",
+      "connection":"AzureWebJobsStorage"
+  },
+  {
+    "type": "blob",
+    "direction": "out",
+    "name": "outputblob",
+    "path": "clean-datasets/KNMI_{Datetime}.csv",
+    "connection": "AzureWebJobsStorage"
+  }
+  ]
+}
