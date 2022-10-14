@@ -26,9 +26,9 @@ def remove_spaces(csv_string):
     csv_list = re.split(r';|\n', csv_string)
     for i in range(len(csv_list)):
         csv_list[i] = csv_list[i].lstrip().rstrip()
-        if (i + 1) % 5 == 0:
-            csv_list[i] += '\n'
-    csv = ';'.join(csv)list
+    csv_rows = [csv_list[i: i+5] for i in range(0, len(csv_list), 5)]
+    joined_rows = [';'.join(sub_list) for sub_list in csv_rows]
+    csv = '\n'.join(joined_rows)
     return csv
 
     
