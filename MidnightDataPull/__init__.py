@@ -5,7 +5,7 @@ import azure.functions as func
 
 
 def get_yesterday_day_number():
-    d = datetime.date.today() - datetime.timedelta(days=1)
+    d = datetime.date.today() - datetime.timedelta(days=2)
     return d.strftime("%d")
 
 
