@@ -29,9 +29,7 @@ datasets container. Outputs a blob to the cleaned_datasets container.
 A Http triggered function which can manually trigger the MidnightDataPull. Not part of the final workflow, but needed 
 for live dmeo purposes
 
-
 ## Setup
-
 In order to easily deploy this app with VSCode you must download the Azure Account, Azure Functions and Azure Resources 
 Extensions. 
 
@@ -40,3 +38,13 @@ I suggest using VSCode version 1.6.3 as 1.7.2 has an issue with said extensions
 
 All other explanation can be found in the docs 
 (<a>https://learn.microsoft.com/en-us/azure/azure-functions/functions-develop-vs-code?tabs=csharp</a>)
+
+## Improvements
+To further improve this example feel free to fork or submit a PR here. Some potential expansions are:
+<ul>
+<li>A script that cleans up old data files from the storage</li>
+<li>Connect up a database instead of the final blob storage</li>
+</ul>
+
+## Contact
+Feel free to connect with me on LinkedIn <a>https://www.linkedin.com/in/benedmondson/</a> to discuss or if I can help you in any way.
